@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "autoprefixer": "^10.2.6",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^8.3.1"
+  },
+  "devDependencies": {
+    "sass": "^1.34.1"
+  },
+  "name": "code-correctly-sass",
+  "description": "- for config and setup environment for sass automatically :",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "npm sass --watch sass/:dist/",
+    "compile:sass": "npm sass sass/:dist/",
+    "concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
+    "prefix:css": "npx postcss --use autoprefixer dist/ -o dist/",
+    "compress:css": "npm sass dist/*.css dist/*.compress.css --style=compressed",
+    "build": "npm npm-run-all compile:sass prefix:css compress:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/othmanekahtal/code-correctly-sass.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/othmanekahtal/code-correctly-sass/issues"
+  },
+  "homepage": "https://github.com/othmanekahtal/code-correctly-sass#readme"
+}
