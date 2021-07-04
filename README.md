@@ -1,5 +1,11 @@
 # Code Correctly SASS !
 
+you can install package using npm command :
+
+`npm i code-correctly-sass`
+
+or read more about this package : https://www.npmjs.com/package/code-correctly-sass
+
 ## Setup environment for sass :
 
 - for config and setup environment for sass automatically :

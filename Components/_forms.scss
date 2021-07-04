@@ -1,0 +1,115 @@
+@import "../Abstracts/_variables.scss";
+
+%center {
+  text-align: center;
+}
+
+.front-showed {
+  z-index: 12;
+  .front-part {
+    height: auto;
+    box-shadow: 0 0 5.5rem rgba(black,.45 );
+    padding: 4.5rem 3.5rem;
+    transform: rotateX(0deg);
+  }
+}
+
+.back-visible {
+  transform: translateX(-90px);
+  .back-part {
+    transform: rotateY(0deg) scale(1.2);
+    padding-left: 12.5rem;
+    width: 25vw;
+  }
+}
+
+.register, .login {
+  width: 22.5vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  perspective: 150rem;
+}
+
+.front-part {
+  border-radius: 1rem;
+  box-shadow: 0 0 25px rgba(black, .25);
+  height: 55vh;
+  overflow: hidden;
+  background-color: white;
+  padding: 0 3.5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 2.75rem;
+  width: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.back-part {
+  transform: rotateY(180deg);
+  border-radius: 1rem;
+  box-shadow: 0 0 25px rgba(black, .25);
+  height: 55vh;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center left;
+  position: absolute;
+  inset: 0;
+  padding: 0 3.5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 4.75rem;
+  width: 100%;
+  backface-visibility: hidden;
+  .title-back {
+    @extend %center;
+    font-size: 4.5rem;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+
+  p {
+    color: rgba(white, .85);
+  }
+}
+
+
+.title {
+  @extend %center;
+  letter-spacing: .25rem;
+  font-size: 4.5rem;
+  font-weight: 700;
+  display: block;
+  color: $purple-color;
+}
+
+p {
+  @extend %center;
+  color: $gray-2-color;
+  font-weight: 500;
+
+}
+
+.forget-link {
+  @extend %center;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: rgba($gray-2-color, .8);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
