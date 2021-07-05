@@ -1,4 +1,4 @@
-# Code Correctly SASS !
+# Code Correctly SASS
 
 you can install package using npm command :
 
