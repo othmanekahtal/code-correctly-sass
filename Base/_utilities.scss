@@ -1,0 +1,53 @@
+$directions: "T", "B", "L", "R", "X", "Y";
+$props: "Padding", "Margin";
+
+@each $direction in $directions {
+  @for $i from 1 through 10 {
+    @each $prop in $props {
+      @if ($prop== "margin") {
+        .margin-#{$direction}-#{$i} {
+          @if ($direction== "T") {
+            margin-top: $i * 1rem;
+          }
+          @if ($direction== "B") {
+            margin-bottom: $i * 1rem;
+          }
+          @if ($direction== "L") {
+            margin-left: $i * 1rem;
+          }
+          @if ($direction== "R") {
+            margin-right: $i * 1rem;
+          }
+          @if ($direction== "X") {
+            margin: 0 $i * 1rem;
+          }
+          @if ($direction== "Y") {
+            margin: $i * 1rem 0;
+          }
+        }
+      }
+      @if ($prop== "padding") {
+        .Padding-#{$direction}-#{$i} {
+          @if ($direction== "T") {
+            padding-top: $i * 1rem;
+          }
+          @if ($direction== "B") {
+            padding-bottom: $i * 1rem;
+          }
+          @if ($direction== "L") {
+            padding-left: $i * 1rem;
+          }
+          @if ($direction== "R") {
+            padding-right: $i * 1rem;
+          }
+          @if ($direction== "X") {
+            padding: 0 $i * 1rem;
+          }
+          @if ($direction== "Y") {
+            padding: $i * 1rem 0;
+          }
+        }
+      }
+    }
+  }
+}
